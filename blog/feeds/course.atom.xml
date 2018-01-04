@@ -20,11 +20,11 @@
 &lt;h2&gt;軌道主體&lt;/h2&gt;
 
 &lt;p&gt;&lt;img src="../data/images/marble/SLDWORKS_2017-12-22_14-34-12.png"&gt;&lt;/p&gt;
-&lt;iframe src="./../data/stlviewer/viewstl.html?src=./../project/STL/track.stl" width="800" height="600"&gt;&lt;/iframe&gt;
+&lt;iframe src="./../data/stlviewer/viewstl.html?src=./../project/STL/track.STL" width="800" height="600"&gt;&lt;/iframe&gt;
 
 &lt;h2&gt;軌道主體改良後&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src="../data/images/marble/trick.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="../data/images/marble/trick.PNG"&gt;&lt;/p&gt;
 &lt;h3&gt;二、軌道模組 V-rep 模擬 &lt;/h3&gt;
 
 &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/WOKI-qp25FQ" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen&gt;&lt;/iframe&gt;
