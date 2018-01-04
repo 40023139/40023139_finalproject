@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>2017Fall CADP&amp;CP (虎尾科大MDE)</title><link href="https://40023139.github.io/40023139_finalproject/blog/" rel="alternate"></link><link href="https://40023139.github.io/40023139_finalproject/blog/feeds/all.atom.xml" rel="self"></link><id>https://40023139.github.io/40023139_finalproject/blog/</id><updated>2018-01-12T13:20:00+08:00</updated><entry><title>2017 Fall CADP 第十八週 期末總整理</title><link href="https://40023139.github.io/40023139_finalproject/blog/2017-fall-cadp-di-shi-ba-zhou-qi-mo-zong-zheng-li.html" rel="alternate"></link><published>2018-01-12T13:20:00+08:00</published><updated>2018-01-12T13:20:00+08:00</updated><author><name>40023139</name></author><id>tag:40023139.github.io,2018-01-12:/40023139_finalproject/blog/2017-fall-cadp-di-shi-ba-zhou-qi-mo-zong-zheng-li.html</id><summary type="html">&lt;p&gt;期末報告&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;期末報告&lt;/p&gt;
+</content><category term="2017fall"></category><category term="CADP"></category><category term="Solvespace"></category><category term="V-rep"></category></entry><entry><title>2017 Fall CADP 第十七週 期末驗收</title><link href="https://40023139.github.io/40023139_finalproject/blog/2017-fall-cadp-di-shi-qi-zhou-qi-mo-yan-shou.html" rel="alternate"></link><published>2018-01-05T13:20:00+08:00</published><updated>2018-01-05T13:20:00+08:00</updated><author><name>40023139</name></author><id>tag:40023139.github.io,2018-01-05:/40023139_finalproject/blog/2017-fall-cadp-di-shi-qi-zhou-qi-mo-yan-shou.html</id><summary type="html">&lt;p&gt;期末驗收&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;期末驗收&lt;/p&gt;
+</content><category term="2017fall"></category><category term="CADP"></category><category term="Solvespace"></category><category term="V-rep"></category></entry><entry><title>2017 Fall CADP 第十六週 小組分工(二)</title><link href="https://40023139.github.io/40023139_finalproject/blog/2017-fall-cadp-di-shi-liu-zhou-xiao-zu-fen-gong-er.html" rel="alternate"></link><published>2017-12-29T13:20:00+08:00</published><updated>2017-12-29T13:20:00+08:00</updated><author><name>40023139</name></author><id>tag:40023139.github.io,2017-12-29:/40023139_finalproject/blog/2017-fall-cadp-di-shi-liu-zhou-xiao-zu-fen-gong-er.html</id><summary type="html">&lt;p&gt;小組分工(二)&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;小組分工(二)&lt;/p&gt;
+
+
+&lt;p&gt;&lt;a href="https://github.com/40023139/40023139_finalproject"&gt;個人倉儲倉儲&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/s40523210/bg1_cadp_finalproject"&gt;第一組協同倉儲&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://cad.onshape.com/documents/08e7fc9f43d856d66ff5a661/w/6e8d0674c911f1123dd3a26d/e/76e38414d220390a04095d03"&gt;Onshape上升機構協同倉儲&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;本週進度&lt;/p&gt;
+&lt;h3&gt;一、軌道主體設計&lt;/h3&gt;
+
+&lt;h2&gt;軌道主體&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src="../data/images/marble/SLDWORKS_2017-12-22_14-34-12.png"&gt;&lt;/p&gt;
+&lt;iframe src="./../data/stlviewer/viewstl.html?src=./../project/STL/track.stl" width="800" height="600"&gt;&lt;/iframe&gt;
+
+&lt;h2&gt;軌道主體改良後&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src="../data/images/marble/trick.png"&gt;&lt;/p&gt;
+&lt;h3&gt;二、軌道模組 V-rep 模擬 &lt;/h3&gt;
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/WOKI-qp25FQ" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h3&gt;三、驅動馬達程式撰寫&lt;/h3&gt;
+
+&lt;h2&gt;28BYJ-48 步進馬達&lt;/h2&gt;
+
+&lt;pre class="brush: c"&gt;
+#include &amp;lt;Stepper.h&amp;gt;
+#define STEPS 2048
+
+Stepper stepper(STEPS, 8, 10, 9, 11);
+
+void setup()
+{
+stepper.setSpeed(5);     // 將馬達的速度設定成150RPM 最大  150~160
+}
+
+void loop()
+{
+Serial.begin(9600);
+Serial.println("+0.5"); //透過序列視窗看到馬達現在轉角
+stepper.step(2048);//正一圈
+delay(1);
+&lt;/pre&gt;
+
+&lt;h3&gt;四、曲柄滑塊上升機構&lt;/h3&gt;
+
+&lt;h2&gt;solvespace 運動簡圖模擬&lt;/h2&gt;
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/pZ_u1j2QTPM" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h2&gt;Onshape繪製與模擬&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src="../data/images/marble/onshape6link.png"&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/Rufa_Z-gLic" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;h2&gt;V-rep模擬&lt;/h2&gt;
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/3mNpb95haaA" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h2&gt;出現問題整理&lt;/h2&gt;
+
+&lt;p&gt;1.滑軌部分需要調整，再加入滑動對之前都能正常運轉，不會有接頭跳開的狀況
+2.承上，滑塊的行程錯誤只有一半的距離&lt;/p&gt;</content><category term="2017fall"></category><category term="CADP"></category><category term="Solvespace"></category><category term="V-rep"></category></entry><entry><title>2017 Fall CADP 第十五週 小組分工</title><link href="https://40023139.github.io/40023139_finalproject/blog/2017-fall-cadp-di-shi-wu-zhou-xiao-zu-fen-gong.html" rel="alternate"></link><published>2017-12-22T13:20:00+08:00</published><updated>2017-12-22T13:20:00+08:00</updated><author><name>40023139</name></author><id>tag:40023139.github.io,2017-12-22:/40023139_finalproject/blog/2017-fall-cadp-di-shi-wu-zhou-xiao-zu-fen-gong.html</id><summary type="html">&lt;p&gt;小組分工&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;小組分工&lt;/p&gt;
+
+
+&lt;p&gt;本週進度&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/40023139/40023139_finalproject"&gt;個人倉儲倉儲&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/s40523210/bg1_cadp_finalproject"&gt;第一組協同倉儲&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://cad.onshape.com/documents/08e7fc9f43d856d66ff5a661/w/6e8d0674c911f1123dd3a26d/e/76e38414d220390a04095d03"&gt;Onshape上升機構協同倉儲&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;一、軌道主體設計&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src="../data/images/marble/SLDWORKS_2017-12-22_14-34-12.png"&gt;&lt;/p&gt;
+&lt;iframe src="./../data/stlviewer/viewstl.html?src=./../project/STL/track.stl" width="800" height="600"&gt;&lt;/iframe&gt;
+
+&lt;h3&gt;二、軌道模組 V-rep 模擬 &lt;/h3&gt;
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/gpRLqwn4_Ow" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;(凸輪上升機構為試做)&lt;/p&gt;
+&lt;h3&gt;三、驅動馬達程式撰寫&lt;/h3&gt;
+
+&lt;p&gt;28BYJ-48 步進馬達&lt;/p&gt;
+&lt;pre class="brush: c"&gt;
+#include &amp;lt;Stepper.h&amp;gt;
+#define STEPS 2048
+
+Stepper stepper(STEPS, 8, 10, 9, 11);
+
+void setup()
+{
+stepper.setSpeed(5);     // 將馬達的速度設定成150RPM 最大  150~160
+}
+
+void loop()
+{
+Serial.begin(9600);
+Serial.println("+0.5"); //透過序列視窗看到馬達現在轉角
+stepper.step(2048);//正一圈
+delay(1);
+&lt;/pre&gt;
+
+&lt;h3&gt;四、曲柄滑塊上升機構&lt;/h3&gt;
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/pZ_u1j2QTPM" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen&gt;&lt;/iframe&gt;</content><category term="2017fall"></category><category term="CADP"></category><category term="Solvespace"></category><category term="V-rep"></category></entry><entry><title>2017 Fall CADP 第十四週</title><link href="https://40023139.github.io/40023139_finalproject/blog/2017-fall-cadp-di-shi-si-zhou.html" rel="alternate"></link><published>2017-12-15T13:20:00+08:00</published><updated>2017-12-15T13:20:00+08:00</updated><author><name>40023139</name></author><id>tag:40023139.github.io,2017-12-15:/40023139_finalproject/blog/2017-fall-cadp-di-shi-si-zhou.html</id><summary type="html">&lt;p&gt;Github倉儲建立&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;Github倉儲建立&lt;/p&gt;
+
+
+&lt;p&gt;&lt;a href="https://github.com/40023139/40023139_finalproject"&gt;個人倉儲倉儲&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/s40523210/bg1_cadp_finalproject"&gt;第一組協同倉儲&lt;/a&gt;&lt;/p&gt;</content><category term="2017fall"></category><category term="CADP"></category><category term="Solvespace"></category><category term="V-rep"></category></entry><entry><title>2017 Fall CADP 第十二週</title><link href="https://40023139.github.io/40023139_finalproject/blog/2017-fall-cadp-di-shi-er-zhou.html" rel="alternate"></link><published>2017-12-01T13:20:00+08:00</published><updated>2017-12-01T13:20:00+08:00</updated><author><name>40023139</name></author><id>tag:40023139.github.io,2017-12-01:/40023139_finalproject/blog/2017-fall-cadp-di-shi-er-zhou.html</id><summary type="html">&lt;p&gt;公假&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;公假&lt;/p&gt;
+</content><category term="2017fall"></category><category term="CADP"></category><category term="Solvespace"></category><category term="V-rep"></category></entry><entry><title>2017 Fall CADP 第十三週</title><link href="https://40023139.github.io/40023139_finalproject/blog/2017-fall-cadp-di-shi-san-zhou.html" rel="alternate"></link><published>2017-12-01T13:20:00+08:00</published><updated>2017-12-01T13:20:00+08:00</updated><author><name>40023139</name></author><id>tag:40023139.github.io,2017-12-01:/40023139_finalproject/blog/2017-fall-cadp-di-shi-san-zhou.html</id><summary type="html">&lt;p&gt;實作
+</summary><content type="html">&lt;p&gt;實作
+&lt;/p&gt;</content><category term="2017fall"></category><category term="CADP"></category><category term="Solvespace"></category><category term="V-rep"></category></entry><entry><title>2017 Fall CADP 第十一週</title><link href="https://40023139.github.io/40023139_finalproject/blog/2017-fall-cadp-di-shi-yi-zhou.html" rel="alternate"></link><published>2017-11-24T13:20:00+08:00</published><updated>2017-11-24T13:20:00+08:00</updated><author><name>40023139</name></author><id>tag:40023139.github.io,2017-11-24:/40023139_finalproject/blog/2017-fall-cadp-di-shi-yi-zhou.html</id><summary type="html">&lt;p&gt;校慶&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;校慶&lt;/p&gt;
+</content><category term="2017fall"></category><category term="CADP"></category><category term="Solvespace"></category><category term="V-rep"></category></entry><entry><title>2017 Fall CADP 第十週</title><link href="https://40023139.github.io/40023139_finalproject/blog/2017-fall-cadp-di-shi-zhou.html" rel="alternate"></link><published>2017-11-17T13:20:00+08:00</published><updated>2017-11-17T13:20:00+08:00</updated><author><name>40023139</name></author><id>tag:40023139.github.io,2017-11-17:/40023139_finalproject/blog/2017-fall-cadp-di-shi-zhou.html</id><summary type="html">&lt;p&gt;ONSHAPE
+</summary><content type="html">&lt;p&gt;ONSHAPE
+&lt;/p&gt;</content><category term="2017fall"></category><category term="CADP"></category><category term="Solvespace"></category><category term="V-rep"></category></entry><entry><title>2017 Fall CADP 第九週 期中考</title><link href="https://40023139.github.io/40023139_finalproject/blog/2017-fall-cadp-di-jiu-zhou-qi-zhong-kao.html" rel="alternate"></link><published>2017-11-10T13:20:00+08:00</published><updated>2017-11-10T13:20:00+08:00</updated><author><name>40023139</name></author><id>tag:40023139.github.io,2017-11-10:/40023139_finalproject/blog/2017-fall-cadp-di-jiu-zhou-qi-zhong-kao.html</id><summary type="html">&lt;p&gt;期中考&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;期中考&lt;/p&gt;
+
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/cPP9OkmBGMo" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h3&gt;Vrep未完成&lt;/h3&gt;
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/uPLnPT5UrRc" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h3&gt;半學期心得:&lt;/h3&gt;
+
+&lt;p&gt;可攜系統中還包括 Leo Editor、Pelican Blog、Reveal.js、Fossil SCM、Git、Solvespace、V-rep、Blender 等系統, 比起以前openshift和github管理上方便很多，一樣透過LEO作網誌管理，可在近端先確認內容，再推送到遠端，軟體部分solvespace可真對機構的運動軌跡，達到精確行程模擬，而onshape可以做版本控制以及協同開發，相同的的是兩者皆有參數畫設計的功能，而且完全免費，最後將圖檔導入VREP作動態模擬，在機械設計上這些工具的好處非常多。&lt;/p&gt;
+&lt;h3&gt;自評:85分&lt;/h3&gt;
+
+&lt;p&gt;評分依據:&lt;/p&gt;
+&lt;p&gt;1.沒全勤
+2.Vrep未完成
+3.少一種表達方式，2D圖面&lt;/p&gt;</content><category term="2017fall"></category><category term="CADP"></category><category term="Solvespace"></category><category term="V-rep"></category></entry><entry><title>2017 Fall CADP 第八週 期中考前準備</title><link href="https://40023139.github.io/40023139_finalproject/blog/2017-fall-cadp-di-ba-zhou-qi-zhong-kao-qian-zhun-bei.html" rel="alternate"></link><published>2017-11-03T13:20:00+08:00</published><updated>2017-11-03T13:20:00+08:00</updated><author><name>40023139</name></author><id>tag:40023139.github.io,2017-11-03:/40023139_finalproject/blog/2017-fall-cadp-di-ba-zhou-qi-zhong-kao-qian-zhun-bei.html</id><summary type="html">&lt;p&gt;期中考前準備&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;期中考前準備&lt;/p&gt;
+
+
+&lt;p&gt;一、Pelican 靜態網誌
+&lt;a href="https://cadpb.kmol.info/40023139/doc/trunk/blog/ "&gt;40023139個人網誌&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;二、Reveal.js 網際簡報
+&lt;a href="https://cadpb.kmol.info/40023139/doc/trunk/index.html#/"&gt;40023139個人簡報&lt;/a&gt;
+各學員在期中考與期末考週, 必須先行利用 ShareX 拍攝個人簡報內容後, 將影片上傳至 Vimeo 與 Youtube, 在考試時段利用 Reveal.js 簡報個人專題報告內容並自評期中與期末成績.&lt;/p&gt;
+&lt;p&gt;三、Solvespace、Onshape 與 V-rep&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://vimeo.com/user73978221#/&gt; 作業影片Vimeo &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.youtube.com/channel/UCk0lnRCjcmWhWN_iqWfv63Q#/&gt; 作業影片youtube &lt;/a&gt;&lt;/p&gt;</content><category term="2017fall"></category><category term="CADP"></category><category term="Solvespace"></category><category term="V-rep"></category></entry><entry><title>2017 Fall CADP 第七週 線上測驗</title><link href="https://40023139.github.io/40023139_finalproject/blog/2017-fall-cadp-di-qi-zhou-xian-shang-ce-yan.html" rel="alternate"></link><published>2017-10-27T13:20:00+08:00</published><updated>2017-10-27T13:20:00+08:00</updated><author><name>40023139</name></author><id>tag:40023139.github.io,2017-10-27:/40023139_finalproject/blog/2017-fall-cadp-di-qi-zhou-xian-shang-ce-yan.html</id><summary type="html">&lt;p&gt;由於當日拍攝畢業照無參與考試顧自評分為0
+以下內容期中考前補做&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;由於當日拍攝畢業照無參與考試顧自評分為0
+以下內容期中考前補做&lt;/p&gt;
+
+
+&lt;p&gt;完成 mp4 檔案拍攝後, 必須冠上校名-系名-課程名稱-學號, 之後同時上傳到以個人學號註冊的 Vimeo 及 Youtube 影片存放區.&lt;/p&gt;
+&lt;p&gt;第二段影片, 請根據 https://hp.kmol.info:8443/get_page/Angle%20Bracket 中的導引說明, 在現場一個步驟接一個步驟, 以切換說明引導的方式, 錄下個人繪製零件的過程.&lt;/p&gt;
+&lt;p&gt;第二段影片名稱: 學號-w7-exam-2.mp4&lt;/p&gt;
+&lt;p&gt;完成 mp4 檔案拍攝後, 必須冠上校名-系名-課程名稱-學號, 之後同時上傳到以個人學號註冊的 Vimeo 及 Youtube 影片存放區.&lt;/p&gt;
+&lt;p&gt;第三段影片, 請利用個人先前所繪製的 Nutcracker 零件, 在 Solvespace 中完成組立, 每個零件的導入與定位過程均要採用 SciTE 文字說明組立所使用的約束條件與操作步驟.&lt;/p&gt;
+&lt;p&gt;第三段影片名稱: 學號-w7-exam-3.mp4&lt;/p&gt;
+&lt;p&gt;完成 mp4 檔案拍攝後, 必須冠上校名-系名-課程名稱-學號, 之後同時上傳到以個人學號註冊的 Vimeo 及 Youtube 影片存放區.&lt;/p&gt;</content><category term="2017fall"></category><category term="CADP"></category><category term="Solvespace"></category><category term="V-rep"></category></entry><entry><title>2017 Fall CADP 第六週 Solvespace 與OnShape</title><link href="https://40023139.github.io/40023139_finalproject/blog/2017-fall-cadp-di-liu-zhou-solvespace-yu-onshape.html" rel="alternate"></link><published>2017-10-20T13:20:00+08:00</published><updated>2017-10-20T13:20:00+08:00</updated><author><name>40023139</name></author><id>tag:40023139.github.io,2017-10-20:/40023139_finalproject/blog/2017-fall-cadp-di-liu-zhou-solvespace-yu-onshape.html</id><summary type="html">&lt;p&gt;完成 Solvespace 建立 Nutcracker .同時在OnShape完成繪製與組立&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;完成 Solvespace 建立 Nutcracker .同時在OnShape完成繪製與組立&lt;/p&gt;
+
+
+&lt;h3&gt;Onshape倉儲&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href="https://cad.onshape.com/documents/3034b437d14d087036b15a57/w/0b8ab4617373c0b0c2ea8f06/e/7aa17f8cf44a6fa1d5ebc485 "&gt;Onshape Assembly&lt;/a&gt;
+&lt;h3&gt;Onshape組合練習&lt;/h3&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/7tirs6HnOAs" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;h3&gt;solvespace組合練習過程&lt;/h3&gt;
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/gWBBwk4Q8cs" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/6moJWYnJtpM" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/59GFbstmJ-w" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/g4XsmRrN8FA" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h3&gt;組合部分&lt;/h3&gt;
+
+&lt;iframe src="./../data/stlviewer/viewstl.html?src=./../project/STL/Assembly2.stl" width="800" height="600"&gt;&lt;/iframe&gt;
+
+&lt;h3&gt;心得&lt;/h3&gt;
+
+&lt;p&gt;在使用兩套軟體時，solvespace在繪製上並沒有omshape方便，但是他可透過更簡單的方法製作運動簡圖，可以清楚的看到機構的行程，而onshape在繪製組立上較簡單，但無法得知明確的機構行程，只能目測製作運動動畫模擬&lt;/p&gt;</content><category term="2017fall"></category><category term="CADP"></category><category term="Solvespace"></category><category term="V-rep"></category></entry><entry><title>2017 Fall CADP 第五週 Solvespace</title><link href="https://40023139.github.io/40023139_finalproject/blog/2017-fall-cadp-di-wu-zhou-solvespace.html" rel="alternate"></link><published>2017-10-13T13:20:00+08:00</published><updated>2017-10-13T13:20:00+08:00</updated><author><name>40023139</name></author><id>tag:40023139.github.io,2017-10-13:/40023139_finalproject/blog/2017-fall-cadp-di-wu-zhou-solvespace.html</id><summary type="html">&lt;p&gt;本週起開始利用 Solvespace 建立 Nutcracker 零組件後, 往後將系統轉入 V-rep 進行運動模擬.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;本週起開始利用 Solvespace 建立 Nutcracker 零組件後, 往後將系統轉入 V-rep 進行運動模擬.&lt;/p&gt;
+
+
+&lt;p&gt;上課內容&lt;/p&gt;
+&lt;p&gt;Solvespace 零組件繪圖練習從 &lt;a href="https://hp.kmol.info:8443/get_page/Angle%20Bracket"&gt;Angle Bracket&lt;/a&gt; 零件繪圖開始, 並且練習利用 &lt;a href="https://hp.kmol.info:8443/get_page/Assembly"&gt;組立導引&lt;/a&gt; 練習組立.&lt;/p&gt;
+&lt;h3&gt;練習部分&lt;/h3&gt;
+
+&lt;iframe src="./../data/stlviewer/viewstl.html?src=./../project/AngleBracket/Angle Bracket.stl" width="800" height="600"&gt;&lt;/iframe&gt;
+
+&lt;iframe src="./../data/stlviewer/viewstl.html?src=./../project/STL/base.stl" width="800" height="600"&gt;&lt;/iframe&gt;
+
+&lt;iframe src="./../data/stlviewer/viewstl.html?src=./../project/STL/cylinder.stl" width="800" height="600"&gt;&lt;/iframe&gt;
+
+&lt;iframe src="./../data/stlviewer/viewstl.html?src=./../project/STL/hinge.stl" width="800" height="600"&gt;&lt;/iframe&gt;
+
+&lt;h3&gt;組合部分&lt;/h3&gt;
+
+&lt;iframe src="./../data/stlviewer/viewstl.html?src=./../project/STL/assemble.stl" width="800" height="600"&gt;&lt;/iframe&gt;</content><category term="2017fall"></category><category term="CADP"></category><category term="Solvespace"></category><category term="V-rep"></category></entry><entry><title>2017 Fall CADP 第四週</title><link href="https://40023139.github.io/40023139_finalproject/blog/2017-fall-cadp-di-si-zhou.html" rel="alternate"></link><published>2017-10-06T13:20:00+08:00</published><updated>2017-10-06T13:20:00+08:00</updated><author><name>40023139</name></author><id>tag:40023139.github.io,2017-10-06:/40023139_finalproject/blog/2017-fall-cadp-di-si-zhou.html</id><summary type="html">&lt;p&gt;本週學習 solvespace 基本零件繪製 &lt;/p&gt;
+</summary><content type="html">&lt;p&gt;本週學習 solvespace 基本零件繪製 &lt;/p&gt;
+
+
+&lt;p&gt;學習如何在工作平面中繪製 2D 機構模擬圖&lt;/p&gt;
+&lt;p&gt;學習如何在不同工作面中, 繪製 2D 輪廓, 進行實體長出或除料&lt;/p&gt;
+&lt;p&gt;學習如何切換繪圖群組 (Group), 修改各階段繪圖內容, 完成所需的零組件&lt;/p&gt;
+&lt;p&gt;學習如何繪製旋轉長出實體&lt;/p&gt;
+&lt;p&gt;學習如何建立新的工作平面&lt;/p&gt;
+&lt;p&gt;學習如何利用點線面約束, 將實體零組件與 2D 機構模擬圖結合, 完成平面連桿機構運動模擬, 並輸出特定點的運動軌跡&lt;/p&gt;
+&lt;p&gt;ew&lt;iframe src="./../data/stlviewer/vistl.html?src=./../project/nutcracker/circulated.stl" width="800" height="600"&gt;&lt;/iframe&gt; &lt;/p&gt;
+&lt;p&gt;二乙上課內容&lt;/p&gt;
+&lt;iframe src="./../data/stlviewer/viewstl.html?src=./../project/nutcracker/nutcracker.stl" width="800" height="600"&gt;&lt;/iframe&gt;
+
+&lt;p&gt;各零件間的運動模擬, 可以仿 &lt;a href="https://stemkoski.github.io/Three.js/Model-Animation-Control.html"&gt;https://stemkoski.github.io/Three.js/Model-Animation-Control.html&lt;/a&gt; (&lt;a href="https://github.com/stemkoski/stemkoski.github.com"&gt;倉儲&lt;/a&gt;)達成.&lt;/p&gt;</content><category term="2017fall"></category><category term="CADP"></category></entry><entry><title>2017 Fall CADP 第三週</title><link href="https://40023139.github.io/40023139_finalproject/blog/2017-fall-cadp-di-san-zhou.html" rel="alternate"></link><published>2017-09-29T12:00:00+08:00</published><updated>2017-09-29T12:00:00+08:00</updated><author><name>40023139</name></author><id>tag:40023139.github.io,2017-09-29:/40023139_finalproject/blog/2017-fall-cadp-di-san-zhou.html</id><summary type="html">&lt;p&gt;請假&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;請假&lt;/p&gt;
+</content><category term="2017fall"></category><category term="CADP"></category><category term="Solvespace"></category><category term="V-rep"></category></entry><entry><title>2017 Fall CADP 第二週</title><link href="https://40023139.github.io/40023139_finalproject/blog/2017-fall-cadp-di-er-zhou.html" rel="alternate"></link><published>2017-09-22T13:20:00+08:00</published><updated>2017-09-22T13:20:00+08:00</updated><author><name>40023139</name></author><id>tag:40023139.github.io,2017-09-22:/40023139_finalproject/blog/2017-fall-cadp-di-er-zhou.html</id><summary type="html">&lt;p&gt;本學期起各班透過一台 Ubuntu 16.04 主機, 建立 Fossil SCM 伺服器, 且每一學員發放一個 Fossil SCM 倉儲, 其中各學員可以利用 Wiki 與 Technote 紀錄學習資料外, 還可以將靜態網誌與簡報檔案放入 Files 資料區.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;本學期起各班透過一台 Ubuntu 16.04 主機, 建立 Fossil SCM 伺服器, 且每一學員發放一個 Fossil SCM 倉儲, 其中各學員可以利用 Wiki 與 Technote 紀錄學習資料外, 還可以將靜態網誌與簡報檔案放入 Files 資料區.&lt;/p&gt;
+
+
+&lt;p&gt;二乙上課內容&lt;/p&gt;
+&lt;p&gt;希望為每位學員建立倉儲的設想流程如下:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;各學員可以獨立維護倉儲內容, 也可以在總管理員的權限下, 為分組學員建立帳號, 逐步導入協同設計&lt;/li&gt;
+&lt;li&gt;各學員的倉儲以修課班級命名伺服器, 以學號命名倉儲, 方便依照此一規律擷取各學員的倉儲頁面.&lt;/li&gt;
+&lt;li&gt;各學員能以電子郵件收到與新建倉儲相關的連結, 以及帳號密碼.&lt;/li&gt;
+&lt;li&gt;必須擴增 Ubuntu ulimits -n 同時開檔的設限範圍 (內定只允許同時開啟 1024 個檔案)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;解決方案:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;主機名稱可以透過 domain dns 中的 CNAME 別名方式處理, 因為目前所能提供出來的 IPv4/IPv6 雙支援主機, 之前已經都設定了符號名稱.&lt;/li&gt;
+&lt;li&gt;fossil init 雖然提供指定管理者的 -A 選項功能, 但是無法直接指定管理者對應密碼, 因此必須建立倉儲之後, 再利用 fossil user 修改密碼, 之後再利用 Gmail 寄出通知信, 其中提供倉儲連結, 登入帳號與密碼等資訊.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;建立各學員倉儲檔案的程式如下, 如前所述, 主要透過兩個 Fossil SCM 指令完成, 在 Windows 採用 Fossil SCM 2.3 版建立所有 .fossil 倉儲時, 將同時以 email 通知各學員. 各學員的 .fossil 檔案再以 sftp 送到伺服主機對應帳號所屬的目錄下. 必須要特別注意的是, 採用 Fossil SCM 2.3 版所建立的 .fossil 倉儲檔案, 在 Ubuntu 操作系統上也必須採用相同版本的 fossil, 否則舊版 fossil 可能無法開啟新版 fossil 程式所建立的倉儲檔.&lt;/p&gt;
+&lt;pre class="brush: python"&gt;
+import os
+import string
+import random
+# 使用 Gmail 寄信必須導入下列模組
+import smtplib
+import re
+from email.mime.text import MIMEText  
+from email.header import Header
+
+# 用來以亂數建立密碼的韓式
+def id_generator(size=6, chars=string.ascii_uppercase + string.digits):
+    '''
+    source: https://stackoverflow.com/questions/2257441/random-string-generation-with-upper-case-letters-and-digits-in-python
+    '''
+    return ''.join(random.choice(chars) for _ in range(size))
+
+# 讀取學員名單, 逐一取得學員學號, 學員名單, 檢查點 1/7
+student_data = open("2017fall_list/1b.txt").read()
+student_list = student_data.splitlines()
+
+# 利用 gmail smtp 功能寄信
+server = smtplib.SMTP('smtp.gmail.com:587')
+server.ehlo()
+server.starttls()
+# 以下必須準備好對應郵件帳號與密碼的外部檔案, 所提供的寄信帳號, 是否可以寄信, 檢查點 2/7
+'''
+寄信之前必須到 https://www.google.com/settings/security/lesssecureapps 修改權限, 改為較低安全權限
+否則無法使用程式寄信!
+'''
+# 從外部檔案讀取要用來寄信的 gmail 帳號與密碼
+# mail.txt 格式為: 電子郵箱,對應密碼, 以逗點隔開, 檢查點 3/7
+email_data = open("z:/2017fall/mail.txt").read()
+email, email_password= email_data.split(",")
+print(email, email_password)
+# 是否登入所提供寄信的電子郵箱, 4/7
+server.login(email, email_password)
+# 不同課程名稱, 與對應主機名稱, 必須配合修改 5/7
+course_title = "計算機程式"
+fossil_server = "cpb.kmol.info"
+
+for student_num in student_list:
+    username = student_num
+    repository = username + '.fossil'
+    # 利用所提供的字串, 以亂數組成六個字元的密碼
+    password = id_generator(6, "23456789abcdef")
+    print(student_num, ", " , password)
+
+    # 執行 dos command 指令, 建立倉儲
+    os.system("fossil init -A " +username + " " + repository)
+    print("已經建立倉儲 " + repository)
+
+    # 執行 dos command 指令, 修改使用者密碼
+    os.system("fossil user password " + username + " " + password + " -R " + repository)
+    print("已經修改密碼")
+
+    # 利用 Gmail 寄信, 告知各學員倉儲連結與帳號密碼
+    # 每一位學員收到的 output 都從這裡 reset
+    output = ""
+    # 若學號欄為空, 則不寄信
+    if student_num != "":
+        # output 為寄給每一位學員的資料表格
+        mail_content = student_num+' 您好: &lt;br /&gt;&lt;br /&gt; 您在 '+course_title+' 課程中的區域網路倉儲: &lt;a href="https://'+fossil_server+'/'+student_num+'"&gt;https://'+fossil_server+'/'+student_num+'&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;'
+        mail_content += '管理帳號為:'+ student_num + '&lt;br /&gt; 管理密碼為: '+ password+'&lt;br /&gt;&lt;br /&gt;'
+        print(student_num)
+        print(mail_content)
+        # 至此 mail_content 已經確定
+        # 在測試與實際寄送資料, 也必須配合修改, 檢查點  6/7
+        receiver_email = student_num + "@gm.nfu.edu.tw"
+        # 測試用
+        #receiver_email = student_num+"@mde.tw"
+        # 列出收信人 email 位址
+        #print(receiver_email)
+        #message= MIMEText(mail_content,'plain','UTF-8')
+        # 以 html 格式寄信
+        message= MIMEText(mail_content,'html','UTF-8')
+        message['Subject'] = Header(course_title+" Fossil SCM 帳號通知", 'UTF-8') 
+        # 可以先不寄信, 確定格式正確後再開啟, 是否實際寄出信件, 檢查點 7/7
+        server.sendmail("gmail_address", receiver_email, message.as_string())
+server.quit()
+&lt;/pre&gt;
+
+&lt;p&gt;各班所完成的主機:&lt;/p&gt;
+&lt;p&gt;二甲電腦輔助設計實習: &lt;a href="https://cadpa.kmol.info"&gt;https://cadpa.kmol.info&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;二乙電腦輔助設計實習: &lt;a href="https://cadpb.kmol.info"&gt;https://cadpb.kmol.info&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;一甲計算機程式: &lt;a href="https://cpa.kmol.info"&gt;https://cpa.kmol.info&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;一乙計算機程式: &lt;a href="https://cpb.kmol.info"&gt;https://cpb.kmol.info&lt;/a&gt;&lt;/p&gt;</content><category term="2017fall"></category><category term="CADP"></category></entry><entry><title>2017 Fall CADP 第二週</title><link href="https://40023139.github.io/40023139_finalproject/blog/2017-fall-cadp-w2.html" rel="alternate"></link><published>2017-09-20T11:00:00+08:00</published><updated>2017-09-20T11:00:00+08:00</updated><author><name>yen</name></author><id>tag:40023139.github.io,2017-09-20:/40023139_finalproject/blog/2017-fall-cadp-w2.html</id><summary type="html">&lt;p&gt;本學期起各班透過一台 Ubuntu 16.04 主機, 建立 Fossil SCM 伺服器, 且每一學員發放一個 Fossil SCM 倉儲, 其中各學員可以利用 Wiki 與 Technote 紀錄學習資料外, 還可以將靜態網誌與簡報檔案放入 Files 資料區.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;本學期起各班透過一台 Ubuntu 16.04 主機, 建立 Fossil SCM 伺服器, 且每一學員發放一個 Fossil SCM 倉儲, 其中各學員可以利用 Wiki 與 Technote 紀錄學習資料外, 還可以將靜態網誌與簡報檔案放入 Files 資料區.&lt;/p&gt;
+
+
+&lt;p&gt;四設二乙上課容&lt;/p&gt;
+&lt;p&gt;希望為每位學員建立倉儲的設想流程如下:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;各學員可以獨立維護倉儲內容, 也可以在總管理員的權限下, 為分組學員建立帳號, 逐步導入協同設計&lt;/li&gt;
+&lt;li&gt;各學員的倉儲以修課班級命名伺服器, 以學號命名倉儲, 方便依照此一規律擷取各學員的倉儲頁面.&lt;/li&gt;
+&lt;li&gt;各學員能以電子郵件收到與新建倉儲相關的連結, 以及帳號密碼.&lt;/li&gt;
+&lt;li&gt;必須擴增 Ubuntu ulimits -n 同時開檔的設限範圍 (內定只允許同時開啟 1024 個檔案)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;解決方案:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;主機名稱可以透過 domain dns 中的 CNAME 別名方式處理, 因為目前所能提供出來的 IPv4/IPv6 雙支援主機, 之前已經都設定了符號名稱.&lt;/li&gt;
+&lt;li&gt;fossil init 雖然提供指定管理者的 -A 選項功能, 但是無法直接指定管理者對應密碼, 因此必須建立倉儲之後, 再利用 fossil user 修改密碼, 之後再利用 Gmail 寄出通知信, 其中提供倉儲連結, 登入帳號與密碼等資訊.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;建立各學員倉儲檔案的程式如下, 如前所述, 主要透過兩個 Fossil SCM 指令完成, 在 Windows 採用 Fossil SCM 2.3 版建立所有 .fossil 倉儲時, 將同時以 email 通知各學員. 各學員的 .fossil 檔案再以 sftp 送到伺服主機對應帳號所屬的目錄下. 必須要特別注意的是, 採用 Fossil SCM 2.3 版所建立的 .fossil 倉儲檔案, 在 Ubuntu 操作系統上也必須採用相同版本的 fossil, 否則舊版 fossil 可能無法開啟新版 fossil 程式所建立的倉儲檔.&lt;/p&gt;
+&lt;pre class="brush: python"&gt;
+import os
+import string
+import random
+# 使用 Gmail 寄信必須導入下列模組
+import smtplib
+import re
+from email.mime.text import MIMEText  
+from email.header import Header
+
+# 用來以亂數建立密碼的韓式
+def id_generator(size=6, chars=string.ascii_uppercase + string.digits):
+    '''
+    source: https://stackoverflow.com/questions/2257441/random-string-generation-with-upper-case-letters-and-digits-in-python
+    '''
+    return ''.join(random.choice(chars) for _ in range(size))
+
+# 讀取學員名單, 逐一取得學員學號, 學員名單, 檢查點 1/7
+student_data = open("2017fall_list/1b.txt").read()
+student_list = student_data.splitlines()
+
+# 利用 gmail smtp 功能寄信
+server = smtplib.SMTP('smtp.gmail.com:587')
+server.ehlo()
+server.starttls()
+# 以下必須準備好對應郵件帳號與密碼的外部檔案, 所提供的寄信帳號, 是否可以寄信, 檢查點 2/7
+'''
+寄信之前必須到 https://www.google.com/settings/security/lesssecureapps 修改權限, 改為較低安全權限
+否則無法使用程式寄信!
+'''
+# 從外部檔案讀取要用來寄信的 gmail 帳號與密碼
+# mail.txt 格式為: 電子郵箱,對應密碼, 以逗點隔開, 檢查點 3/7
+email_data = open("z:/2017fall/mail.txt").read()
+email, email_password= email_data.split(",")
+print(email, email_password)
+# 是否登入所提供寄信的電子郵箱, 4/7
+server.login(email, email_password)
+# 不同課程名稱, 與對應主機名稱, 必須配合修改 5/7
+course_title = "計算機程式"
+fossil_server = "cpb.kmol.info"
+
+for student_num in student_list:
+    username = student_num
+    repository = username + '.fossil'
+    # 利用所提供的字串, 以亂數組成六個字元的密碼
+    password = id_generator(6, "23456789abcdef")
+    print(student_num, ", " , password)
+
+    # 執行 dos command 指令, 建立倉儲
+    os.system("fossil init -A " +username + " " + repository)
+    print("已經建立倉儲 " + repository)
+
+    # 執行 dos command 指令, 修改使用者密碼
+    os.system("fossil user password " + username + " " + password + " -R " + repository)
+    print("已經修改密碼")
+
+    # 利用 Gmail 寄信, 告知各學員倉儲連結與帳號密碼
+    # 每一位學員收到的 output 都從這裡 reset
+    output = ""
+    # 若學號欄為空, 則不寄信
+    if student_num != "":
+        # output 為寄給每一位學員的資料表格
+        mail_content = student_num+' 您好: &lt;br /&gt;&lt;br /&gt; 您在 '+course_title+' 課程中的區域網路倉儲: &lt;a href="https://'+fossil_server+'/'+student_num+'"&gt;https://'+fossil_server+'/'+student_num+'&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;'
+        mail_content += '管理帳號為:'+ student_num + '&lt;br /&gt; 管理密碼為: '+ password+'&lt;br /&gt;&lt;br /&gt;'
+        print(student_num)
+        print(mail_content)
+        # 至此 mail_content 已經確定
+        # 在測試與實際寄送資料, 也必須配合修改, 檢查點  6/7
+        receiver_email = student_num + "@gm.nfu.edu.tw"
+        # 測試用
+        #receiver_email = student_num+"@mde.tw"
+        # 列出收信人 email 位址
+        #print(receiver_email)
+        #message= MIMEText(mail_content,'plain','UTF-8')
+        # 以 html 格式寄信
+        message= MIMEText(mail_content,'html','UTF-8')
+        message['Subject'] = Header(course_title+" Fossil SCM 帳號通知", 'UTF-8') 
+        # 可以先不寄信, 確定格式正確後再開啟, 是否實際寄出信件, 檢查點 7/7
+        server.sendmail("gmail_address", receiver_email, message.as_string())
+server.quit()
+&lt;/pre&gt;
+
+&lt;p&gt;各班所完成的主機:&lt;/p&gt;
+&lt;p&gt;二甲電腦輔助設計實習: &lt;a href="https://cadpa.kmol.info"&gt;https://cadpa.kmol.info&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;二乙電腦輔助設計實習: &lt;a href="https://cadpb.kmol.info"&gt;https://cadpb.kmol.info&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;一甲計算機程式: &lt;a href="https://cpa.kmol.info"&gt;https://cpa.kmol.info&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;一乙計算機程式: &lt;a href="https://cpb.kmol.info"&gt;https://cpb.kmol.info&lt;/a&gt;&lt;/p&gt;</content><category term="2017fall"></category><category term="CADP"></category></entry></feed>
