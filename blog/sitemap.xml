@@ -4,210 +4,217 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>https://40023139.github.io/40023139_finalproject/blog/</loc>
-<lastmod>2018-01-05T00:14:11-00:00</lastmod>
+<loc>./</loc>
+<lastmod>2018-01-05T00:50:18-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://40023139.github.io/40023139_finalproject/blog/archives.html</loc>
-<lastmod>2018-01-05T00:14:11-00:00</lastmod>
+<loc>./archives.html</loc>
+<lastmod>2018-01-05T00:50:18-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://40023139.github.io/40023139_finalproject/blog/tags.html</loc>
-<lastmod>2018-01-05T00:14:11-00:00</lastmod>
+<loc>./tags.html</loc>
+<lastmod>2018-01-05T00:50:18-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://40023139.github.io/40023139_finalproject/blog/categories.html</loc>
-<lastmod>2018-01-05T00:14:11-00:00</lastmod>
+<loc>./categories.html</loc>
+<lastmod>2018-01-05T00:50:18-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://40023139.github.io/40023139_finalproject/blog/pages/about/</loc>
+<loc>./pages/about/</loc>
 <lastmod>2017-11-10T13:56:42+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://40023139.github.io/40023139_finalproject/blog/2017-fall-cadp-di-shi-ba-zhou-qi-mo-zong-zheng-li.html</loc>
+<loc>./2017-fall-cadp-di-shi-ba-zhou-qi-mo-zong-zheng-li.html</loc>
 <lastmod>2018-01-12T13:20:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://40023139.github.io/40023139_finalproject/blog/2017-fall-cadp-di-shi-qi-zhou-qi-mo-yan-shou.html</loc>
+<loc>./2017-fall-cadp-bi-ji-ben-nei-rong.html</loc>
 <lastmod>2018-01-05T13:20:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://40023139.github.io/40023139_finalproject/blog/2017-fall-cadp-di-shi-liu-zhou-xiao-zu-fen-gong-er.html</loc>
+<loc>./2017-fall-cadp-di-shi-qi-zhou-qi-mo-yan-shou.html</loc>
+<lastmod>2018-01-05T13:20:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>./2017-fall-cadp-di-shi-liu-zhou-xiao-zu-fen-gong-er.html</loc>
 <lastmod>2017-12-29T13:20:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://40023139.github.io/40023139_finalproject/blog/2017-fall-cadp-di-shi-wu-zhou-xiao-zu-fen-gong.html</loc>
+<loc>./2017-fall-cadp-di-shi-wu-zhou-xiao-zu-fen-gong.html</loc>
 <lastmod>2017-12-22T13:20:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://40023139.github.io/40023139_finalproject/blog/2017-fall-cadp-di-shi-si-zhou.html</loc>
+<loc>./2017-fall-cadp-di-shi-si-zhou.html</loc>
 <lastmod>2017-12-15T13:20:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://40023139.github.io/40023139_finalproject/blog/2017-fall-cadp-di-shi-er-zhou.html</loc>
+<loc>./2017-fall-cadp-di-shi-er-zhou.html</loc>
 <lastmod>2017-12-01T13:20:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://40023139.github.io/40023139_finalproject/blog/2017-fall-cadp-di-shi-san-zhou.html</loc>
+<loc>./2017-fall-cadp-di-shi-san-zhou.html</loc>
 <lastmod>2017-12-01T13:20:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://40023139.github.io/40023139_finalproject/blog/2017-fall-cadp-di-shi-yi-zhou.html</loc>
+<loc>./2017-fall-cadp-di-shi-yi-zhou.html</loc>
 <lastmod>2017-11-24T13:20:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://40023139.github.io/40023139_finalproject/blog/2017-fall-cadp-di-shi-zhou.html</loc>
+<loc>./2017-fall-cadp-di-shi-zhou.html</loc>
 <lastmod>2017-11-17T13:20:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://40023139.github.io/40023139_finalproject/blog/2017-fall-cadp-di-jiu-zhou-qi-zhong-kao.html</loc>
+<loc>./2017-fall-cadp-di-jiu-zhou-qi-zhong-kao.html</loc>
 <lastmod>2017-11-10T13:20:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://40023139.github.io/40023139_finalproject/blog/2017-fall-cadp-di-ba-zhou-qi-zhong-kao-qian-zhun-bei.html</loc>
+<loc>./2017-fall-cadp-di-ba-zhou-qi-zhong-kao-qian-zhun-bei.html</loc>
 <lastmod>2017-11-03T13:20:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://40023139.github.io/40023139_finalproject/blog/2017-fall-cadp-di-qi-zhou-xian-shang-ce-yan.html</loc>
+<loc>./2017-fall-cadp-di-qi-zhou-xian-shang-ce-yan.html</loc>
 <lastmod>2017-10-27T13:20:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://40023139.github.io/40023139_finalproject/blog/2017-fall-cadp-di-liu-zhou-solvespace-yu-onshape.html</loc>
+<loc>./2017-fall-cadp-di-liu-zhou-solvespace-yu-onshape.html</loc>
 <lastmod>2017-10-20T13:20:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://40023139.github.io/40023139_finalproject/blog/2017-fall-cadp-di-wu-zhou-solvespace.html</loc>
+<loc>./2017-fall-cadp-di-wu-zhou-solvespace.html</loc>
 <lastmod>2017-10-13T13:20:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://40023139.github.io/40023139_finalproject/blog/2017-fall-cadp-di-si-zhou.html</loc>
+<loc>./2017-fall-cadp-di-si-zhou.html</loc>
 <lastmod>2017-10-06T13:20:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://40023139.github.io/40023139_finalproject/blog/2017-fall-cadp-di-san-zhou.html</loc>
+<loc>./2017-fall-cadp-di-san-zhou.html</loc>
 <lastmod>2017-09-29T12:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://40023139.github.io/40023139_finalproject/blog/2017-fall-cadp-di-er-zhou.html</loc>
+<loc>./2017-fall-cadp-di-er-zhou.html</loc>
 <lastmod>2017-09-22T13:20:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://40023139.github.io/40023139_finalproject/blog/2017-fall-cadp-w2.html</loc>
+<loc>./2017-fall-cadp-w2.html</loc>
 <lastmod>2017-09-20T11:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://40023139.github.io/40023139_finalproject/blog/category/course.html</loc>
+<loc>./category/course.html</loc>
 <lastmod>2018-01-12T13:20:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://40023139.github.io/40023139_finalproject/blog/tag/2017fall.html</loc>
+<loc>./tag/2017fall.html</loc>
 <lastmod>2018-01-12T13:20:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://40023139.github.io/40023139_finalproject/blog/tag/cadp.html</loc>
+<loc>./tag/cadp.html</loc>
 <lastmod>2018-01-12T13:20:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://40023139.github.io/40023139_finalproject/blog/tag/solvespace.html</loc>
+<loc>./tag/solvespace.html</loc>
 <lastmod>2018-01-12T13:20:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://40023139.github.io/40023139_finalproject/blog/tag/v-rep.html</loc>
+<loc>./tag/v-rep.html</loc>
 <lastmod>2018-01-12T13:20:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://40023139.github.io/40023139_finalproject/blog/author/40023139.html</loc>
+<loc>./author/40023139.html</loc>
 <lastmod>2018-01-12T13:20:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://40023139.github.io/40023139_finalproject/blog/author/yen.html</loc>
+<loc>./author/yen.html</loc>
 <lastmod>2017-09-20T11:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
